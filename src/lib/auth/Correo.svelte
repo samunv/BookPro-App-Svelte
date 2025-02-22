@@ -114,7 +114,7 @@
   
   <style>
 	form {
-	  width: 300px;
+	  width: 500px;
 	  margin-left: auto;
 	  margin-right: auto;
 	  background-color: #fff;
@@ -129,7 +129,6 @@
 	h1 {
 	  text-align: center;
 	  width: 40%;
-	  margin-top: 30px;
 	  margin-left: auto;
 	  margin-right: auto;
 	  font-size: 50px;
@@ -142,10 +141,8 @@
 	}
   
 	input {
-	  width: 80%;
+	  width: 90%;
 	  padding: 10px;
-	  margin-top: 20px;
-	  margin-bottom: 20px;
 	  border: 1px solid #ccc;
 	  border-radius: 10px;
 	  font-size: 15px;
@@ -154,9 +151,13 @@
 	input:focus {
 	  outline: none;
 	}
+
+	#token{
+		margin-top: 20px;
+	}
   
 	button {
-	  width: 50%;
+	  width: 30%;
 	  padding: 20px;
 	  font-size: 15px;
 	  background-color: var(--tema-principal);
@@ -209,8 +210,7 @@
 	  z-index: 999;
 	}
   
-	.botones {
-	  width: 50%;
+	#botones {
 	  display: flex;
 	  flex-direction: row;
 	  justify-content: center;
@@ -237,11 +237,10 @@
 	  color: var(--tema-principal);
 	}
   
-	#botones {
-	  display: flex;
-	  flex-direction: row;
+	#botones button{
+		width: auto;
 	}
-  
+
 	#botones button:nth-child(2) {
 	  background-color: black;
 	}
@@ -319,6 +318,9 @@
   
 	  .formulario {
 		width: 60%;
+	  }
+	  button{
+		width: 50%;
 	  }
   
 	  #ventana-recordar-contrasena {

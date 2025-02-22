@@ -84,7 +84,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 40px;
+	margin-top: 0px;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;

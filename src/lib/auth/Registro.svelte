@@ -177,10 +177,10 @@
   h1 {
     text-align: center;
     width: 40%;
-    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     font-size: 50px;
+    margin-top: 30px;
   }
 
   label {

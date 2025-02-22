@@ -51,7 +51,7 @@
 					{@html SVGflecha}Mis Citas
 				{:else if path === "/notificaciones"}
 					{@html SVGflecha}Notificaciones
-				{:else if path === "/servicio"}
+				{:else if path === "/servicios"}
 					{@html SVGflecha}Servicios
 				{:else if path === "/agenda"}
 					{@html SVGflecha}Mi Agenda
