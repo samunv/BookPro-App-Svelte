@@ -1,0 +1,55 @@
+:root {
+	--tema-principal: #006bff !important;
+	/*#006bff: Color de la App Modelo de BookPro*/
+	--color-texto-complementario: white !important;
+	/*No definido aún*/
+	--color-secundario-complementario: #ecf8ff!important;
+	/*#BFE8FF: Color de la App Modelo de BookPro*/
+	--color-fondo: #f4f4f4;
+	/*#F4F4F4F4 es el color de fondo de la App Modelo de BookPro*/
+	--color-elementos: white;
+	--color-texto-elementos: black;
+	--color-btn-variado: black;
+}
+
+@font-face {
+	font-family: 'arimo-regular';
+	src: url('/fonts/Arimo-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: var(--tema-principal);
+	color: black;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.seccion-principal {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-radius: 25px 25px 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-fondo);
+	width: 100%;
+	overflow: hidden;
+	min-height: calc(100vh - 170px);
+}
+
+.seccion-principal-auth{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-fondo);
+	width: 100%;
+	overflow: hidden;
+	min-height: 100vh;
+}

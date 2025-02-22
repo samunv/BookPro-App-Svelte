@@ -1,0 +1,300 @@
+#encabezado-tabla {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+}
+
+.columna-dia {
+    color: white;
+}
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+    width: 60%;
+
+}
+
+.columna-foto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+}
+
+
+.seccion-filtros {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#encabezado-tabla th {
+    padding-top: 30px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+
+
+}
+
+#columna-citas {
+    width: 70%;
+}
+
+
+tr td:first-child {
+    padding-left: 40px;
+}
+
+tr td:last-child {
+    padding-right: 40px;
+}
+
+#encabezado-tabla th:first-child {
+    padding-left: 40px;
+}
+
+.caja-cita {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*background-color: #BFE8FF;*/
+    border-radius: 7px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    text-align: left;
+    background-color: #f4f4f4;
+    color: black;
+
+}
+
+
+.caja-cita:hover {
+    transform: scale(1.07);
+}
+
+.foto-cliente {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+
+
+tr:last-child td {
+    padding-bottom: 40px;
+}
+
+#encabezado-tabla th:last-child {
+    padding-right: 40px;
+}
+
+.contenedor-flechas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+tr td {
+    padding: 15px 30px;
+    border: none;
+    text-align: center;
+    background-color: white;
+
+}
+
+tr {
+    background-color: white;
+
+}
+
+.info-cliente {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.info-servicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.info-servicio p {
+    margin: 0;
+}
+
+.info-cliente p {
+    margin: 0px;
+}
+
+.destacado {
+    font-weight: bold;
+}
+
+.detalles {
+    font-size: 14px;
+}
+
+.filtros-citas {
+    margin-bottom: 30px;
+
+}
+
+.filtros-citas select {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.no-asignada {
+    color: grey;
+}
+
+.flechas {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+}
+
+
+#dia-anterior {
+    transform: scaleX(-1);
+}
+
+.fecha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+
+hr {
+    min-width: 200px;
+}
+
+
+.td-iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.td-iconos svg {
+    width: 23px;
+    height: 23px;
+}
+
+
+
+.icono-texto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 7px 15px;
+    cursor: pointer;
+    margin: 3px;
+    transition: all 0.3s ease;
+    color: black;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border: 1px transparent solid;
+}
+
+.icono-texto:hover {
+    background-color: rgb(216, 216, 216);
+    ;
+}
+#fecha-citas{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    overflow: hidden;
+}
+input,
+select {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+
+#input-mes option {
+    background-color: white;
+    border: none;
+    font-size: 12px;
+    padding: 2px 5px;
+    text-align: left;
+}
+
+#input-dia {
+    width: 50px;
+    text-align: left;
+}
+
+#input-año {
+    width: 80px;
+    text-align: left;
+}
+
+#indicador-hoy {
+    width: 50px;
+}
+
+input:nth-child(1) {
+    width: 50px;
+    text-align: center;
+}
+
+
+.icono-texto.eliminar {
+    background-color: var(--tema-principal);
+    color: white;
+}
+.icono-texto.eliminar:hover{
+    background-color: transparent;
+    border: 1px var(--tema-principal) solid ;
+    color: var(--tema-principal);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    /* Fijo en la pantalla */
+    top: 0;
+    /* Arriba */
+    left: 0;
+    /* Izquierda */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro con transparencia */
+    z-index: 998;
+    /* Asegurarse de que esté detrás de la ventana */
+}

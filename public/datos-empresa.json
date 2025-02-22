@@ -1,0 +1,25 @@
+{
+    "propietario": "Samuel Navasardyan Vardanyan",
+    "cif": "B-12345678",
+    "nif":"",
+    "nombre": "BookPro",
+    "direccion": "Moncloa, Madrid",
+    "hora_apertura":"12:00",
+    "hora_cierre": "22:00",
+    "web": "bookpro.com",
+    "contacto":[
+        {
+            "telefono": "455 32 21 44",
+            "correo": "bookpro@gmail.com",
+            "redes_sociales":[{
+                "instagram": "@bookpro",
+                "facebook": "@bookpro"
+            }]
+        }
+    ], 
+    "logo": "/img/B-logo-bpro.png",
+    "banner":""
+
+    
+}
+
