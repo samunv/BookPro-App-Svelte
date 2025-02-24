@@ -3,9 +3,11 @@
   import { Router, Route, Link } from "svelte-routing";
   import { fly } from "svelte/transition";
 
+  import {URLservidor} from "../stores/store";
+
   let cuentaNotificaciones = 0;
   const URL_USUARIO =
-	"http://localhost/backend-bookpro/Controlador/indexcontrolador.php";
+	URLservidor+"/indexcontrolador.php";
 
   let correoUsuario = localStorage.getItem("correoSesion");
   let permisos = localStorage.getItem("permisos");

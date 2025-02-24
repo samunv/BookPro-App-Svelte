@@ -5,6 +5,8 @@
   import { fade, fly, scale } from "svelte/transition";
   import Overlay from "../elements/Overlay.svelte";
 
+  import { URLservidor } from "../../stores/store";
+
   let nombre = "";
   let telefono = "";
   let idUsuario = "";
@@ -19,9 +21,6 @@
   let errorFoto = false;
 
   let mostrarOverlay = false;
-  function cerrarModal() {
-	mostrarOverlay = false;
-  }
 
   // Observar cambios en la propiedad 'mostrar'
   $: if (mostrarOverlay) {
@@ -37,7 +36,7 @@
   // Obtener datos del usuario
   async function obtenerUsuario(correo) {
 	const response = await fetch(
-	  `http://localhost/backend-bookpro/Controlador/editarperfilcontrolador.php?correoUsuario=${correo}`
+	  `${URLservidor}/editarperfilcontrolador.php?correoUsuario=${correo}`
 	);
 	const usuario = await response.json();
 	usuario.forEach((u) => {
@@ -51,7 +50,7 @@
   // Actualizar nombre
   async function actualizarNombre() {
 	const response = await fetch(
-	  `http://localhost/backend-bookpro/Controlador/editarperfilcontrolador.php?idUsuario=${idUsuario}&nombre=${nombre}`
+	  `${URLservidor}/editarperfilcontrolador.php?idUsuario=${idUsuario}&nombre=${nombre}`
 	);
 	const data = await response.json();
 
@@ -66,7 +65,7 @@
   // Actualizar teléfono
   async function actualizarTelefono() {
 	const response = await fetch(
-	  `http://localhost/backend-bookpro/Controlador/editarperfilcontrolador.php?idUsuario=${idUsuario}&telefono=${telefono}`
+	  `${URLservidor}/editarperfilcontrolador.php?idUsuario=${idUsuario}&telefono=${telefono}`
 	);
 	const data = await response.json();
 
@@ -84,7 +83,7 @@
 	formData.append("idUsuario", idUsuario);
 
 	const response = await fetch(
-	  "http://localhost/backend-bookpro/Controlador/fotoperfil.php",
+	  "${URLservidor}/fotoperfil.php",
 	  {
 		method: "POST",
 		body: formData,
@@ -151,6 +150,7 @@
 	on:click={() => activarVentana("editarFoto")}
   />
 </div>
+<h2>{correo}</h2>
 
 <form class="formulario" id="formularioEditar">
   <label for="nombreEditar">Nombre</label>
@@ -335,6 +335,10 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 15px;
+  }
+
+  #formularioEditar{
+	margin-top: 5px;
   }
 
   #fotoDePerfil {
