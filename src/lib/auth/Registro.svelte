@@ -187,8 +187,10 @@
     display: block;
     margin: 10px 0 10px;
     font-size: 15px;
+    font-weight: bold;
+    color: #666e7e;
   }
-
+  
   input {
     width: 80%;
     padding: 10px;

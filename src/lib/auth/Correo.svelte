@@ -25,7 +25,6 @@
       if (data.error) {
         alert(data.error);
       } else {
-        alert(data.token);
         // Posteriormente encriptar
         sessionStorage.setItem("token", data.token);
         mostrarConfirmacion = true;

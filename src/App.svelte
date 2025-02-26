@@ -13,6 +13,7 @@
   import Agenda from "./lib/admin/Agenda.svelte";
   import Reserva from "./lib/reserva/Reserva.svelte";
   import Correo from "./lib/auth/Correo.svelte";
+  import AuthHeader from "./lib/elements/AuthHeader.svelte";
 </script>
 
 <!--Página principal de la aplicación-->
@@ -35,6 +36,11 @@ cuyo nombre está asociado a su funcionalidad.
   <!--HEADER contiene la lógica de control de la sesión de la APP. Acceder a HEADER para ver.-->
   <Header />
 {/if}
+
+{#if location.pathname === "/" || location.pathname === "/registro" || location.pathname === "/correo"}
+  <AuthHeader />
+{/if}
+
 
 <!--Si la página no es una página de la carpeta Auth, entonces se aplican unos estilos, y si es, otros.-->
 <section

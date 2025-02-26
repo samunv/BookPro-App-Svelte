@@ -83,7 +83,7 @@
 	formData.append("idUsuario", idUsuario);
 
 	const response = await fetch(
-	  "${URLservidor}/fotoperfil.php",
+	  `${URLservidor}/fotoperfil.php`,
 	  {
 		method: "POST",
 		body: formData,
@@ -150,7 +150,7 @@
 	on:click={() => activarVentana("editarFoto")}
   />
 </div>
-<h2>{correo}</h2>
+<h2 id="h2-correo">{correo}</h2>
 
 <form class="formulario" id="formularioEditar">
   <label for="nombreEditar">Nombre</label>
@@ -268,6 +268,14 @@
 	justify-content: center;
   }
 
+  
+  label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666e7e;
+  }
+
   .btn-actualizar:hover {
 	background-color: transparent;
 	color: var(--tema-principal);
@@ -289,6 +297,10 @@
 	right: 90%;
 	top: 50px;
 	z-index: 999;
+  }
+
+  #h2-correo{
+	color:black;
   }
 
   .botones {

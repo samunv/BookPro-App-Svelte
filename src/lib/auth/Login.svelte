@@ -7,7 +7,6 @@
   let correoRecuperar = "";
   let mostrarVentanaRecuperar = false;
 
-
   let errorTexto = "";
   let errorBooleano = false;
 
@@ -28,13 +27,10 @@
     datos.append("contrasenaLogin", contrasena);
 
     try {
-      const response = await fetch(
-        URLservidor+"/procesarlogin.php",
-        {
-          method: "POST",
-          body: datos,
-        }
-      );
+      const response = await fetch(URLservidor + "/procesarlogin.php", {
+        method: "POST",
+        body: datos,
+      });
 
       const data = await response.json();
 
@@ -77,11 +73,8 @@
 </script>
 
 <div class="login">
-  <div class="logo-app">
-    <img src="img/B-logo-bpro.png" alt="" />
-    <h1>ookPro</h1>
-  </div>
 
+  <h1>Inicia Sesión</h1>
   <form class="formulario" on:submit={iniciarSesion}>
     <label for="correo">Correo</label>
     <div class="contenedor-input">
@@ -200,17 +193,19 @@
 
   h1 {
     text-align: center;
-    width: 40%;
-    margin: 50px;
     margin-left: auto;
     margin-right: auto;
     font-size: 50px;
+    margin: 30px;
+
   }
 
   label {
     display: block;
     margin: 10px 0 10px;
     font-size: 15px;
+    font-weight: bold;
+    color: #666e7e;
   }
 
   .contenedor-input {
@@ -228,10 +223,10 @@
   input {
     border: none;
     margin-left: 5px;
-  }
-  input:focus {
     outline: none;
+    background-color: transparent;
   }
+
 
   button {
     width: 50%;
@@ -448,7 +443,6 @@
       margin-left: auto;
       margin-right: auto;
       font-size: 30px;
-      margin: 20px;
       margin-top: 50px;
       width: 100%;
     }
