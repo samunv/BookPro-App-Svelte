@@ -5,7 +5,7 @@
   import { fade, fly, scale } from "svelte/transition";
   import Overlay from "../elements/Overlay.svelte";
 
-  import { URLservidor } from "../../stores/store";
+  import { URLservidor } from "../../stores/server";
 
   let nombre = "";
   let telefono = "";

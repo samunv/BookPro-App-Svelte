@@ -1,4 +1,6 @@
 <script>
+  import { Link } from "svelte-routing";
+
   let nombre = localStorage.getItem("nombre") || "";
   let foto = localStorage.getItem("foto") || "/img/default.png";
   let correoSesion = localStorage.getItem("correoSesion");

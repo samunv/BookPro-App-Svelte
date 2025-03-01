@@ -3,7 +3,7 @@
   import { Router, Route, Link } from "svelte-routing";
   import { fly } from "svelte/transition";
 
-  import {URLservidor} from "../stores/store";
+  import {URLservidor} from "../stores/server";
 
   let cuentaNotificaciones = 0;
   const URL_USUARIO =
@@ -32,7 +32,7 @@
 
 <section class="contenedor-enlaces" id="contenido">
   {#if permisos !== "1"}
-	<a href="/servicios" class="enlaces" id="reservar-cita">
+	<Link to="/servicios" class="enlaces" id="reservar-cita">
 	  <div class="contenedor-img">
 		<svg
 		  xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +49,9 @@
 	  <div class="contenedor-txt">
 		<p>Reservar Cita</p>
 	  </div>
-	</a>
+	</Link>
 
-	<a href="/ver-citas" class="enlaces" id="ver-citas">
+	<Link to="/ver-citas" class="enlaces" id="ver-citas">
 	  <div class="contenedor-img">
 		<svg
 		  xmlns="http://www.w3.org/2000/svg"
@@ -68,11 +68,11 @@
 	  <div class="contenedor-txt">
 		<p>Mis Citas</p>
 	  </div>
-	</a>
+	</Link>
   {/if}
 
   {#if permisos === "1"}
-	<a href="/agenda" class="enlaces">
+	<Link to="/agenda" class="enlaces">
 	  <div class="contenedor-img">
 		<svg
 		  xmlns="http://www.w3.org/2000/svg"
@@ -89,10 +89,10 @@
 	  <div class="contenedor-txt">
 		<p>Mi Agenda</p>
 	  </div>
-	</a>
+	</Link>
   {/if}
 
-  <a href="/perfil" class="enlaces" id="editar-perfil">
+  <Link to="/perfil" class="enlaces" id="editar-perfil">
 	<div class="contenedor-img">
 	  <svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -108,9 +108,9 @@
 	<div class="contenedor-txt">
 	  <p>Editar Perfil</p>
 	</div>
-  </a>
+</Link>
 
-  <a href="/empresa" class="enlaces">
+  <Link to="/empresa" class="enlaces">
 	<div class="contenedor-img">
 	  <svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -127,9 +127,9 @@
 	<div class="contenedor-txt">
 	  <p>Empresa</p>
 	</div>
-  </a>
+</Link>
 
-  <a href="/notificaciones" class="enlaces" id="notificaciones">
+  <Link to="/notificaciones" class="enlaces" id="notificaciones">
 	<div class="contenedor-foto-cuenta">
 	  <div class="contenedor-img">
 		<svg
@@ -152,7 +152,7 @@
 	<div class="contenedor-txt">
 	  <p>Notificaciones</p>
 	</div>
-  </a>
+</Link>
 </section>
 
 <div id="texto-autor">
@@ -179,12 +179,12 @@
 	margin-right: auto;
   }
 
-  .enlaces {
+  :global(.enlaces) {
 	overflow: hidden;
 	border-radius: 15px;
 	margin: 20px;
 	transition: all 0.3s ease;
-	background-color: white;
+	background-color: var(--color-elementos) !important;
 	width: 250px;
 	height: 120px;
 	display: flex;
@@ -194,7 +194,7 @@
 	text-decoration: none;
   }
 
-  .enlaces:hover {
+  :global(.enlaces):hover {
 	transform: scale(1.1);
   }
 

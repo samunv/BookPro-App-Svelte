@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  import { URLservidor } from "../../stores/store";
+  import { URLservidor } from "../../stores/server";
+  import { navigate } from "svelte-routing";
 
   let correo = "";
   let contrasena = "";
@@ -14,7 +15,7 @@
     // Verificar en localStorage si el correoSesion está presente
     const correoSesion = localStorage.getItem("correoSesion");
     if (correoSesion) {
-      window.location.assign("/inicio"); // Redirige si ya está logueado
+      navigate("/inicio"); // Redirige si ya está logueado
     } else {
     }
   }

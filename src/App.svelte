@@ -35,12 +35,9 @@ cuyo nombre está asociado a su funcionalidad.
 {#if location.pathname !== "/" && location.pathname !== "/registro" && location.pathname !== "/correo"}
   <!--HEADER contiene la lógica de control de la sesión de la APP. Acceder a HEADER para ver.-->
   <Header />
-{/if}
-
-{#if location.pathname === "/" || location.pathname === "/registro" || location.pathname === "/correo"}
+{:else}
   <AuthHeader />
 {/if}
-
 
 <!--Si la página no es una página de la carpeta Auth, entonces se aplican unos estilos, y si es, otros.-->
 <section

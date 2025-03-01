@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  import { URLservidor } from "../../stores/store";
+  import { URLservidor } from "../../stores/server";
 
   let url = URLservidor + "/notificacionescontrolador.php";
 
